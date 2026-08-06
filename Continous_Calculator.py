@@ -66,7 +66,7 @@ while True:
     if choice in [4,5,6]:
       second_number = get_divisor("Enter the second number:")
     else:
-      second_number = get_number("Enter the second number")
+      second_number = get_number("Enter the second number:")
 
     if second_number is None:
      continue
@@ -98,4 +98,4 @@ while True:
         continue
 
     print(f"\nResult: {result}")
-    input("\nPress Enter to return to the menu...")
+    input("\nPress Enter to return to the operation menu...")

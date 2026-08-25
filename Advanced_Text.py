@@ -1,82 +1,89 @@
-"""
-    This is an Advanced Text
-    Transformation program that 
-    uses string methods and formatting to produce Text output.
-"""
+"""Provide advanced text analysis and transformation tools."""
+
 
 def word_count(text):
-    """count total and unique word in text.
-    
+    """Count the total and unique words in text.
+
     Args:
         text: The text to be analyzed.
-        
+
     Returns:
-        A dictionary containing the total and unique word count.
+        A dictionary containing total and unique word counts.
     """
     words = text.lower().split()
+
     return {
         "total": len(words),
-        "unique": len(set(words))
+        "unique": len(set(words)),
     }
 
+
 def palindrome_checker(text):
-    """Check if the given text is a palindrome.
-    
+    """Check whether text is a palindrome.
+
+    The check ignores case and whitespace.
+
     Args:
         text: The text to be checked.
-        
+
     Returns:
-        True if the text is a palindrome and also ignoring case and whitespace, False otherwise.
+        True if the text is a palindrome, otherwise False.
     """
     cleaned_text = text.lower().replace(" ", "")
+
     return cleaned_text == cleaned_text[::-1]
 
+
 def text_normalizer(text):
-    """Normalize the text by removing strip whitespace,
-     and converting to lowercase.
-    
+    """Normalize text by removing extra whitespace and lowercasing.
+
     Args:
         text: The text to be normalized.
-        
+
     Returns:
         The normalized text.
     """
-    return text.strip().lower()
+    return " ".join(text.strip().lower().split())
+
 
 def sentence_builder(name, score, grade):
-    """Build a sentence using string formatting.
-    
+    """Build a formatted student report.
+
     Args:
-        name: The name of the student.
-        score: The score of the student.
-        grade: The grade of the student.
-        
+        name: The student's name.
+        score: The student's score.
+        grade: The student's grade.
+
     Returns:
         A formatted sentence containing the student's information.
     """
     return f"Student {name} scored {score} and received a grade of {grade}."
 
+
 def word_frequency(text):
-    """returns the top 3 most frequent  words as a formatted string.
-    
+    """Count the frequency of each word in the text.
+
     Args:
         text: The text to be analyzed.
-        
+
     Returns:
-        A dictionary containing words as keys and their frequencies as values.
+        A dictionary containing each word and its frequency.
     """
     words = text.lower().split()
-    frequencies= {}
+    frequencies = {}
 
     for word in words:
         frequencies[word] = frequencies.get(word, 0) + 1
-    return frequencies  
+
+    return frequencies
+
 
 def format_table(data):
-    """cretate an alignment table of names and scores.   
+    """Create an aligned table of names and scores.
+
     Args:
-        data: A list of dictionaries containing the data to be formatted.
-        
+        data: A list of name and score tuples.
+
     Returns:
         A formatted string representing the table.
     """
@@ -90,9 +97,10 @@ def format_table(data):
 
     return "\n".join(lines)
 
+
 def run_tools():
     """Run the text transformation tools."""
-    text = input("Enter some Text:")
+    text = input("Enter some text: ")
 
     if not text.strip():
         print("Error: Please enter some text.")
@@ -108,8 +116,9 @@ def run_tools():
     table_data = [
         ("Alice", 90),
         ("Bob", 85),
-        ("Charlie", 75)
+        ("Charlie", 75),
     ]
+
     table = format_table(table_data)
 
     print("\n=== Advanced Text Tools ===")
@@ -118,12 +127,15 @@ def run_tools():
     print(f"Unique words: {count['unique']}")
     print(f"Palindrome: {palindrome}")
     print(f"Normalized text: {normalized_text}")
-    print(f"Top 3 words: {frequency}")
+    print(f"Word frequencies: {frequency}")
     print(f"Report: {report}")
     print(f"\n{table}")
+
+
 def main():
-        """Start the Advanced Text tools program."""
-        run_tools()
+    """Start the Advanced Text Tools program."""
+    run_tools()
+
 
 if __name__ == "__main__":
-    main() 
+    main()

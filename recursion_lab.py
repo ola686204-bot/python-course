@@ -151,4 +151,4 @@ def run_comparisons():
 
 
 if __name__ == "__main__":
-    run_comparisons()                                                            
+    run_comparisons()

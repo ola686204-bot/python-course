@@ -1,27 +1,27 @@
-"""This is a simple calculator
- that performs basic arithmetic 
- operations on two numbers"""
+"""Provide a simple calculator for two numbers."""
 
-a_float = float(input("Enter first number:"))
-b_float = float(input("Enter second number:"))
 
-#This is a basic Arithmetic that perform addition
+a_float = float(input("Enter first number: "))
+b_float = float(input("Enter second number: "))
+
+
+# Display the result of addition.
 print("The sum of two numbers is:", a_float + b_float)
 
-#This is a basic Arithmetic that perform subtraction
+# Display the result of subtraction.
 print("The subtraction of two numbers is:", a_float - b_float)
 
-#This is a basic Arithmetic that perform multiplication
+# Display the result of multiplication.
 print("The multiplication of two numbers is:", a_float * b_float)
 
-#This is a basic Arithmetic that perform division
+# Display the result of division.
 print("The division of two numbers is:", a_float / b_float)
 
-#This is a basic Arithmetic that perform modulus
+# Display the result of modulus.
 print("The modulus of two numbers is:", a_float % b_float)
 
-#This is a basic Arithmetic that perform exponentiation
+# Display the result of exponentiation.
 print("The exponentiation of two numbers is:", a_float ** b_float)
 
-#This is a basic Arithmetic that perform floor division
+# Display the result of floor division.
 print("The floor division of two numbers is:", a_float // b_float)

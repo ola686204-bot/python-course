@@ -81,7 +81,6 @@ makes the structure clear and prevents accidental changes to the record.
 ---
 
 ## 4. VALID_GRADES
-
 ### Original structure
 
 The original program created a list inside `create_student()`:

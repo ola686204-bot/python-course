@@ -1,7 +1,5 @@
-"""Provide a menu-driven calculator for basic arithmetic operations.
-
-Each operation is handled by its own function.
-"""
+"""This is a program that handles all errors gracefully.
+provides specific and helpful error messages for every failuure mode, and never crashes under any user inpuut"""
 
 OPERATIONS = [
     "Addition",

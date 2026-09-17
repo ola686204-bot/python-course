@@ -63,7 +63,6 @@ def load_students(filename):
     print(f"Skipped {skipped_lines} malformed line(s).")
     return students
 
-
 def save_students(students, filename):
     """Save student records to a CSV file.
 
@@ -92,7 +91,6 @@ def save_students(students, filename):
     except OSError as error:
         print(f"Error saving {filename}: {error}")
         return False
-
 
 def display_students(students):
     """Display student records in an aligned table.
@@ -145,7 +143,6 @@ def filter_by_city(students, city):
 
     return matching_students
 
-
 def filter_by_min_score(students, min_score):
     """Return students with scores at least the minimum score.
 
@@ -159,11 +156,10 @@ def filter_by_min_score(students, min_score):
     matching_students = []
 
     for student in students:
-        if student["score"] <= min_score:
+        if student["score"] >= min_score:
             matching_students.append(student)
 
     return matching_students
-
 
 def compute_summary(students):
     """Compute statistics about student records.
